@@ -18,7 +18,6 @@
     var kvpForm = $("#localstorage-form");
     var formAlert = $("#form-alert");
 
-
     function resetTable() {
         localStorageTableBody.empty();
 

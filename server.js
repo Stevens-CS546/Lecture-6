@@ -40,6 +40,10 @@ app.get("/localstorage", function (request, response) {
     response.render("pages/localstorage");
 });
 
+app.get("/form-validation", function (request, response) {
+    response.render("pages/form-validation");
+});
+
 app.get("/", function (request, response) {
     // We have to pass a second parameter to specify the root directory
     // __dirname is a global variable representing the file directory you are currently in
