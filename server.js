@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 
 // This is called 'adding middleware', or things that will help parse your request
 app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded
 
 // This middleware will activate for every request we make to 
 // any path starting with /assets;
@@ -20,14 +20,30 @@ app.use('/assets', express.static('static'));
 
 // Setup your routes here!
 
-app.get("/home", function (request, response) {
-    response.render("pages/home", { pageTitle: "Welcome Home" });
+app.get("/manual-dom", function (request, response) {
+    response.render("pages/manual-dom");
 });
 
-app.get("/", function (request, response) { 
+app.get("/jquery-dom", function (request, response) {
+    response.render("pages/jquery-dom");
+});
+
+app.get("/the-window", function (request, response) {
+    response.render("pages/the-window");
+});
+
+app.get("/location", function (request, response) {
+    response.render("pages/location");
+});
+
+app.get("/localstorage", function (request, response) {
+    response.render("pages/localstorage");
+});
+
+app.get("/", function (request, response) {
     // We have to pass a second parameter to specify the root directory
     // __dirname is a global variable representing the file directory you are currently in
-    response.sendFile("./pages/index.html", { root: __dirname });
+    response.sendFile("./pages/index.html", {root: __dirname});
 });
 
 // We can now navigate to localhost:3000

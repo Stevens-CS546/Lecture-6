@@ -1,2 +1,2 @@
-# Boilerplate
-A boilerplate to use in CS-546 Assignments
+# Lecture 6
+An example of many browser based APIs
